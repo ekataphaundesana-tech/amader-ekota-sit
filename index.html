@@ -6,7 +6,11 @@
 
 <title>আমাদের একতা ফাউন্ডেশন</title>
 
+<meta name="description" content="আমাদের একতা ফাউন্ডেশন - মানবতার পাশে, সবসময়।">
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+
 *{
   margin:0;
   padding:0;
@@ -14,372 +18,651 @@
   scroll-behavior:smooth;
 }
 
+:root{
+  --green:#063b27;
+  --green2:#087a4b;
+  --bright:#08c765;
+  --light:#effff6;
+  --white:#ffffff;
+  --dark:#071b13;
+  --shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
 body{
-  font-family:Arial,"Noto Sans Bengali",sans-serif;
-  background:#07110d;
-  color:#fff;
+  font-family:'Noto Sans Bengali',Arial,sans-serif;
+  background:#f4fff8;
+  color:#10251b;
   line-height:1.7;
 }
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
 
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(5,20,14,.96);
-  border-bottom:1px solid #174b35;
+  z-index:999;
+  background:rgba(3,45,30,.97);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.18);
 }
 
 .nav{
-  max-width:1150px;
-  margin:auto;
-  min-height:75px;
-  padding:10px 20px;
+  min-height:82px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:15px;
 }
 
-.logo{
+.brand{
   display:flex;
   align-items:center;
   gap:12px;
-  color:white;
-  text-decoration:none;
-  font-size:21px;
-  font-weight:bold;
 }
 
-.logo img{
-  width:52px;
-  height:52px;
+.brand img{
+  width:58px;
+  height:58px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid #19b76b;
-  background:white;
+  border:3px solid var(--bright);
+  background:#fff;
 }
 
-nav{
+.brand-text h2{
+  color:white;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:800;
+}
+
+.brand-text p{
+  color:#9ff5c7;
+  font-size:12px;
+  margin-top:2px;
+}
+
+.nav-actions{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:8px;
 }
 
-nav a{
-  color:#ddd;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+.whatsapp-top{
+  background:#09c763;
+  color:#fff;
+  padding:9px 14px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:14px;
 }
 
-nav a:hover{
-  color:#20d47a;
+.menu{
+  color:#fff;
+  font-size:30px;
+  display:none;
 }
 
-.donate-btn{
-  background:#08b653;
-  color:white !important;
-  padding:10px 18px;
-  border-radius:25px;
-}
+/* ================= HERO ================= */
 
 .hero{
-  min-height:620px;
+  min-height:590px;
+  position:relative;
   display:flex;
   align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 20px;
+  overflow:hidden;
   background:
-    radial-gradient(circle at top,#125d3d,#07110d 65%);
+    linear-gradient(90deg,rgba(1,37,23,.92),rgba(1,37,23,.60),rgba(1,37,23,.20)),
+    url("hero.jpg") center/cover no-repeat;
 }
 
 .hero-content{
-  max-width:850px;
+  color:#fff;
+  max-width:680px;
+  padding:75px 0;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 15px;
+  border:1px solid #39e78b;
+  border-radius:30px;
+  color:#aaffcf;
+  margin-bottom:18px;
+  background:rgba(0,0,0,.18);
 }
 
 .hero h1{
-  font-size:clamp(38px,7vw,72px);
-  margin-bottom:20px;
-  color:#fff;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.15;
+  font-weight:800;
+  margin-bottom:18px;
 }
 
 .hero h1 span{
-  color:#20d47a;
+  color:#08e66f;
 }
 
 .hero p{
   font-size:20px;
-  color:#d5e4dc;
-  margin-bottom:30px;
+  color:#e9fff2;
+  max-width:650px;
+  margin-bottom:28px;
 }
 
 .buttons{
   display:flex;
-  justify-content:center;
-  gap:15px;
   flex-wrap:wrap;
+  gap:12px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  background:#08b653;
-  color:white;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 24px;
+  border-radius:35px;
+  font-weight:700;
+  transition:.25s;
+  border:2px solid transparent;
 }
 
-.btn.secondary{
-  background:transparent;
-  border:1px solid #20d47a;
+.btn:hover{
+  transform:translateY(-3px);
 }
+
+.btn-primary{
+  background:#08c765;
+  color:#fff;
+}
+
+.btn-outline{
+  border-color:#12d978;
+  color:#fff;
+  background:rgba(0,0,0,.15);
+}
+
+/* ================= SECTION ================= */
 
 section{
-  padding:80px 20px;
-}
-
-.container{
-  max-width:1150px;
-  margin:auto;
+  padding:75px 0;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:45px;
+  margin-bottom:42px;
+}
+
+.section-title small{
+  color:#08a957;
+  font-weight:700;
+  font-size:16px;
 }
 
 .section-title h2{
-  font-size:36px;
-  margin-bottom:10px;
-  color:#20d47a;
+  color:#073d29;
+  font-size:38px;
+  font-weight:800;
+  margin-top:5px;
 }
 
 .section-title p{
-  color:#b9c9c1;
+  color:#61736a;
+  max-width:650px;
+  margin:8px auto 0;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:#0d2118;
-  border:1px solid #174b35;
-  padding:28px 20px;
-  border-radius:18px;
-  text-align:center;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-7px);
-  border-color:#20d47a;
-}
-
-.icon{
-  font-size:45px;
-  margin-bottom:12px;
-}
-
-.card h3{
-  color:#20d47a;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#c4d2cb;
-}
+/* ================= ABOUT ================= */
 
 .about{
-  background:#0a1912;
+  background:#fff;
 }
 
-.about-box{
+.about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:35px;
   align-items:center;
 }
 
-.about-text h2{
-  font-size:38px;
-  color:#20d47a;
-  margin-bottom:20px;
+.about-image{
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.about-image img{
+  width:100%;
+  display:block;
+}
+
+.about-text h3{
+  font-size:30px;
+  color:#073d29;
+  margin-bottom:15px;
 }
 
 .about-text p{
-  color:#ccd8d2;
-  font-size:17px;
+  color:#53665d;
+  margin-bottom:14px;
 }
 
-.stats{
+.check{
+  display:flex;
+  gap:10px;
+  margin:10px 0;
+  font-weight:600;
+}
+
+.check span{
+  color:#08bd61;
+  font-size:22px;
+}
+
+/* ================= LEADERS ================= */
+
+.leaders{
+  background:#effff6;
+}
+
+.leader-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.leader-card{
+  background:#fff;
+  border:1px solid #c9eedb;
+  border-radius:25px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  box-shadow:var(--shadow);
+  transition:.3s;
+}
+
+.leader-card:hover{
+  transform:translateY(-5px);
+}
+
+.leader-icon{
+  min-width:100px;
+  height:100px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#08c765,#087447);
+  color:#fff;
+  font-size:40px;
+  border:5px solid #c8f7dc;
+}
+
+.leader-card h3{
+  color:#073d29;
+  font-size:23px;
+}
+
+.position{
+  display:inline-block;
+  background:#087c4d;
+  color:#fff;
+  border-radius:20px;
+  padding:4px 13px;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.phone{
+  display:inline-block;
+  margin-top:7px;
+  color:#087a4b;
+  font-weight:700;
+}
+
+/* ================= PROGRAMS ================= */
+
+.programs{
+  background:#063b27;
+  color:#fff;
+}
+
+.programs .section-title h2{
+  color:#fff;
+}
+
+.programs .section-title p{
+  color:#c5e9d5;
+}
+
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
   gap:15px;
-  margin-top:25px;
 }
 
-.stat{
-  background:#10281d;
-  border:1px solid #174b35;
-  border-radius:15px;
-  padding:20px;
+.program{
   text-align:center;
+  padding:25px 10px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  transition:.3s;
 }
 
-.stat strong{
-  display:block;
+.program:hover{
+  background:rgba(8,199,101,.15);
+  transform:translateY(-5px);
+}
+
+.program-icon{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#09c763;
   font-size:30px;
-  color:#20d47a;
 }
 
-.activity{
-  background:#07110d;
+.program h3{
+  font-size:16px;
 }
 
-.activity-card{
-  background:#0d2118;
-  border:1px solid #174b35;
-  border-radius:18px;
-  padding:25px;
-}
+/* ================= CONTACT CTA ================= */
 
-.activity-card h3{
-  color:#20d47a;
-  margin-bottom:10px;
-}
-
-.activity-card p{
-  color:#c4d2cb;
-}
-
-.donation{
-  text-align:center;
-  background:linear-gradient(135deg,#0b422a,#082016);
-}
-
-.donation h2{
-  font-size:38px;
-  margin-bottom:15px;
-}
-
-.donation p{
-  max-width:700px;
-  margin:0 auto 25px;
-  color:#d2e1da;
-}
-
-.contact{
-  background:#0a1912;
-  text-align:center;
+.contact-cta{
+  background:linear-gradient(135deg,#eafff2,#d5f9e5);
 }
 
 .contact-box{
-  max-width:700px;
-  margin:auto;
-  background:#10281d;
-  border:1px solid #174b35;
-  border-radius:20px;
-  padding:35px 20px;
+  background:#fff;
+  border-radius:30px;
+  padding:40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  box-shadow:var(--shadow);
 }
 
 .contact-box h2{
-  color:#20d47a;
-  margin-bottom:15px;
+  color:#073d29;
+  font-size:30px;
 }
 
 .contact-box p{
-  margin:8px 0;
-  color:#d3ded8;
+  color:#65776e;
+  margin-top:5px;
 }
+
+.contact-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.contact-btn{
+  padding:13px 20px;
+  border-radius:30px;
+  font-weight:700;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+}
+
+.wa{
+  background:#09c763;
+  color:white;
+}
+
+.call{
+  border:2px solid #08b85d;
+  color:#087a4b;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-  background:#030906;
-  border-top:1px solid #174b35;
-  padding:30px 20px;
+  background:#031d13;
+  color:#fff;
+  padding:55px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:35px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer-brand img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #09c763;
+}
+
+footer h3{
+  color:#54ef9a;
+  margin-bottom:12px;
+}
+
+footer p{
+  color:#b9d8c8;
+}
+
+.footer-link{
+  display:block;
+  margin:7px 0;
+  color:#d9f5e5;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.15);
+  margin-top:35px;
+  padding-top:18px;
   text-align:center;
-  color:#9eaaa4;
+  color:#a8c5b6;
 }
 
-footer strong{
-  color:#20d47a;
+/* ================= TOP BUTTON ================= */
+
+.top-btn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#08c765;
+  color:white;
+  font-size:23px;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  z-index:500;
 }
 
-@media(max-width:750px){
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
 
   .nav{
-    flex-direction:column;
-    padding:15px;
+    min-height:70px;
   }
 
-  nav{
-    width:100%;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
+  .brand img{
+    width:48px;
+    height:48px;
   }
 
-  nav a{
-    font-size:14px;
+  .brand-text h2{
+    font-size:17px;
+  }
+
+  .brand-text p{
+    font-size:10px;
+  }
+
+  .whatsapp-top{
+    padding:7px 10px;
+    font-size:11px;
+  }
+
+  .menu{
+    display:block;
   }
 
   .hero{
-    min-height:550px;
-    padding:60px 20px;
+    min-height:620px;
+    background:
+      linear-gradient(180deg,rgba(1,37,23,.60),rgba(1,37,23,.94)),
+      url("hero.jpg") center/cover no-repeat;
+  }
+
+  .hero-content{
+    padding:65px 0;
+    text-align:center;
   }
 
   .hero h1{
-    font-size:42px;
+    font-size:43px;
   }
 
   .hero p{
     font-size:17px;
   }
 
-  .about-box{
+  .buttons{
+    justify-content:center;
+  }
+
+  .btn{
+    width:100%;
+    max-width:330px;
+  }
+
+  section{
+    padding:55px 0;
+  }
+
+  .section-title h2{
+    font-size:30px;
+  }
+
+  .about-grid{
     grid-template-columns:1fr;
   }
 
-  .about-text{
+  .about-text h3{
+    font-size:25px;
+  }
+
+  .leader-grid{
+    grid-template-columns:1fr;
+  }
+
+  .leader-card{
+    padding:20px;
+  }
+
+  .leader-icon{
+    min-width:75px;
+    height:75px;
+    font-size:30px;
+  }
+
+  .leader-card h3{
+    font-size:19px;
+  }
+
+  .program-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .program:last-child{
+    grid-column:1/-1;
+    max-width:50%;
+    width:100%;
+    margin:auto;
+  }
+
+  .contact-box{
+    padding:28px 20px;
+    flex-direction:column;
     text-align:center;
   }
 
-  .stats{
-    grid-template-columns:1fr 1fr;
+  .contact-box h2{
+    font-size:25px;
+  }
+
+  .contact-buttons{
+    justify-content:center;
+    width:100%;
+  }
+
+  .contact-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer-brand{
+    justify-content:center;
   }
 }
 
-@media(max-width:450px){
+@media(max-width:430px){
 
-  .logo{
-    font-size:18px;
-  }
-
-  .logo img{
-    width:45px;
-    height:45px;
-  }
-
-  nav{
-    gap:8px;
-  }
-
-  nav a{
-    font-size:13px;
+  .nav-actions .whatsapp-top{
+    display:none;
   }
 
   .hero h1{
-    font-size:35px;
+    font-size:37px;
   }
 
-  .section-title h2,
-  .about-text h2,
-  .donation h2{
-    font-size:30px;
+  .hero p{
+    font-size:16px;
+  }
+
+  .leader-card{
+    gap:13px;
+  }
+
+  .program-grid{
+    gap:10px;
+  }
+
+  .program{
+    padding:20px 5px;
   }
 }
 </style>
@@ -387,249 +670,285 @@ footer strong{
 
 <body>
 
-<header>
-  <div class="nav">
+<!-- ================= HEADER ================= -->
 
-    <a href="#home" class="logo">
-      <img src="logo.jpg" alt="আমাদের একতা ফাউন্ডেশন">
-      <span>আমাদের একতা</span>
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="brand">
+      <img src="logo.jpg" alt="আমাদের একতা ফাউন্ডেশন লোগো">
+
+      <div class="brand-text">
+        <h2>আমাদের একতা</h2>
+        <p>মানবতার পাশে, সবসময়</p>
+      </div>
     </a>
 
-    <nav>
-      <a href="#home">হোম</a>
-      <a href="#about">আমাদের সম্পর্কে</a>
-      <a href="#work">কার্যক্রম</a>
-      <a href="#donate" class="donate-btn">সহযোগিতা করুন</a>
-      <a href="#contact">যোগাযোগ</a>
-    </nav>
+    <div class="nav-actions">
+      <a class="whatsapp-top"
+         href="https://wa.me/8801822025360"
+         target="_blank">
+        💬 WhatsApp
+      </a>
+
+      <a class="menu" href="#contact">☰</a>
+    </div>
 
   </div>
 </header>
 
 
+<!-- ================= HERO ================= -->
+
 <main>
 
 <section class="hero" id="home">
-  <div class="hero-content">
 
-    <h1>
-      আমাদের একতা<br>
-      <span>ফাউন্ডেশন</span>
-    </h1>
-
-    <p>
-      একতার শক্তিতে গড়ি মানবিক সমাজ।
-      মানুষের পাশে দাঁড়ানোই আমাদের প্রধান লক্ষ্য।
-    </p>
-
-    <div class="buttons">
-      <a href="#work" class="btn">আমাদের কার্যক্রম</a>
-      <a href="#donate" class="btn secondary">সহযোগিতা করুন</a>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="work">
   <div class="container">
 
-    <div class="section-title">
-      <h2>আমাদের কার্যক্রম</h2>
-      <p>মানবতার সেবায় আমাদের বিভিন্ন উদ্যোগ</p>
-    </div>
+    <div class="hero-content">
 
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>শিক্ষা সহায়তা</h3>
-        <p>
-          সুবিধাবঞ্চিত শিশুদের শিক্ষা উপকরণ ও প্রয়োজনীয় সহায়তা প্রদান।
-        </p>
+      <div class="badge">
+        🤝 মানবতার জন্য একসাথে
       </div>
 
-      <div class="card">
-        <div class="icon">🏥</div>
-        <h3>স্বাস্থ্যসেবা</h3>
-        <p>
-          অসহায় মানুষের জন্য স্বাস্থ্য সচেতনতা ও চিকিৎসা সহায়তা।
-        </p>
-      </div>
+      <h1>
+        আমাদের একতা<br>
+        <span>ফাউন্ডেশন</span>
+      </h1>
 
-      <div class="card">
-        <div class="icon">🍚</div>
-        <h3>খাদ্য সহায়তা</h3>
-        <p>
-          দরিদ্র ও অসহায় মানুষের মাঝে খাদ্য সহায়তা পৌঁছে দেওয়া।
-        </p>
-      </div>
+      <p>
+        একতার শক্তিতে গড়ি মানবিক সমাজ।
+        অসহায়, দুস্থ ও পিছিয়ে পড়া মানুষের
+        পাশে দাঁড়ানোই আমাদের প্রধান লক্ষ্য।
+      </p>
 
-      <div class="card">
-        <div class="icon">🤝</div>
-        <h3>সামাজিক উন্নয়ন</h3>
-        <p>
-          সমাজের মানুষের কল্যাণে বিভিন্ন সামাজিক উদ্যোগ গ্রহণ।
-        </p>
-      </div>
+      <div class="buttons">
 
-      <div class="card">
-        <div class="icon">🌊</div>
-        <h3>দুর্যোগ সহায়তা</h3>
-        <p>
-          বন্যা ও অন্যান্য দুর্যোগে ক্ষতিগ্রস্ত মানুষের পাশে দাঁড়ানো।
-        </p>
+        <a href="#programs" class="btn btn-primary">
+          আমাদের কার্যক্রম →
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          সহযোগিতা করুন
+        </a>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
-  <div class="container">
 
-    <div class="about-box">
-
-      <div class="about-text">
-        <h2>আমাদের একতার গল্প</h2>
-
-        <p>
-          আমাদের একতা ফাউন্ডেশন মানুষের পাশে দাঁড়ানোর একটি মানবিক উদ্যোগ।
-          সমাজের অসহায়, দরিদ্র ও সুবিধাবঞ্চিত মানুষের জীবনকে একটু সহজ করার
-          লক্ষ্যেই আমাদের পথচলা।
-        </p>
-
-        <p style="margin-top:15px;">
-          আমরা বিশ্বাস করি—একসাথে কাজ করলে একটি সুন্দর ও মানবিক সমাজ গড়ে তোলা সম্ভব।
-        </p>
-
-        <div class="stats">
-
-          <div class="stat">
-            <strong>1000+</strong>
-            উপকারভোগী
-          </div>
-
-          <div class="stat">
-            <strong>200+</strong>
-            শিক্ষা সহায়তা
-          </div>
-
-          <div class="stat">
-            <strong>50+</strong>
-            খাদ্য সহায়তা
-          </div>
-
-          <div class="stat">
-            <strong>20+</strong>
-            সামাজিক উদ্যোগ
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <div style="font-size:90px;">❤️</div>
-        <h3>মানুষের পাশে সর্বদা</h3>
-        <p>
-          মানবতার সেবায় একসাথে এগিয়ে চলি।
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section class="activity">
   <div class="container">
 
     <div class="section-title">
-      <h2>আমাদের উদ্যোগ</h2>
-      <p>মানুষের কল্যাণে পরিচালিত কার্যক্রম</p>
+      <small>আমাদের সম্পর্কে</small>
+      <h2>মানবতার জন্য আমাদের পথচলা</h2>
+      <p>
+        ভালোবাসা, সহমর্মিতা ও একতার মাধ্যমে
+        একটি সুন্দর সমাজ গড়াই আমাদের উদ্দেশ্য।
+      </p>
     </div>
 
-    <div class="cards">
+    <div class="about-grid">
 
-      <div class="activity-card">
-        <h3>📚 শিক্ষা উপকরণ বিতরণ</h3>
-        <p>
-          সুবিধাবঞ্চিত শিক্ষার্থীদের মাঝে প্রয়োজনীয় শিক্ষা উপকরণ বিতরণ।
-        </p>
+      <div class="about-image">
+        <img src="hero.jpg" alt="আমাদের কার্যক্রম">
       </div>
 
-      <div class="activity-card">
-        <h3>🍚 খাদ্য সহায়তা কর্মসূচি</h3>
-        <p>
-          অসহায় ও দরিদ্র পরিবারের মাঝে খাদ্যসামগ্রী বিতরণ।
-        </p>
-      </div>
+      <div class="about-text">
 
-      <div class="activity-card">
-        <h3>🏥 ফ্রি মেডিকেল ক্যাম্প</h3>
-        <p>
-          মানুষের মাঝে স্বাস্থ্য সচেতনতা ও চিকিৎসা সহায়তা প্রদান।
-        </p>
-      </div>
+        <h3>একসাথে বদলে দিতে চাই মানুষের জীবন</h3>
 
-      <div class="activity-card">
-        <h3>🌊 বন্যার্তদের সহায়তা</h3>
         <p>
-          দুর্যোগে ক্ষতিগ্রস্ত পরিবারের পাশে প্রয়োজনীয় সহায়তা নিয়ে দাঁড়ানো।
+          আমাদের একতা ফাউন্ডেশন মানুষের পাশে থাকার
+          একটি সামাজিক উদ্যোগ। সমাজের অসহায় ও
+          সুবিধাবঞ্চিত মানুষের জন্য আমরা কাজ করতে চাই।
         </p>
+
+        <div class="check">
+          <span>✓</span>
+          <div>অসহায় মানুষের পাশে দাঁড়ানো</div>
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          <div>শিক্ষা ও মানবিক সহায়তা</div>
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          <div>সামাজিক উন্নয়ন ও সচেতনতা</div>
+        </div>
+
+        <div class="check">
+          <span>✓</span>
+          <div>পরিবেশ ও মানবতার সেবা</div>
+        </div>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 
-<section class="donation" id="donate">
+<!-- ================= LEADERS ================= -->
+
+<section class="leaders" id="leaders">
 
   <div class="container">
 
-    <h2>সহযোগিতা করুন ❤️</h2>
+    <div class="section-title">
+      <small>আমাদের নেতৃত্ব</small>
+      <h2>ফাউন্ডেশনের দায়িত্বশীল ব্যক্তিবর্গ</h2>
+    </div>
 
-    <p>
-      আপনার ছোট একটি সহযোগিতা একজন অসহায় মানুষের জীবনে বড় পরিবর্তন
-      আনতে পারে। আসুন মানবতার সেবায় একসাথে এগিয়ে আসি।
-    </p>
+    <div class="leader-grid">
 
-    <a href="#contact" class="btn">
-      যোগাযোগ করুন
-    </a>
+      <!-- PRESIDENT -->
+
+      <div class="leader-card">
+
+        <div class="leader-icon">
+          👤
+        </div>
+
+        <div>
+          <span class="position">সভাপতি</span>
+
+          <h3>মোঃ তালহা সরদার</h3>
+
+          <a class="phone" href="tel:01822025360">
+            📞 01822025360
+          </a>
+        </div>
+
+      </div>
+
+
+      <!-- SECRETARY -->
+
+      <div class="leader-card">
+
+        <div class="leader-icon">
+          👤
+        </div>
+
+        <div>
+          <span class="position">সাধারণ সম্পাদক</span>
+
+          <h3>মোঃ ইব্রাহিম</h3>
+
+          <a class="phone" href="tel:01822025360">
+            📞 01822025360
+          </a>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
 
 
-<section class="contact" id="contact">
+<!-- ================= PROGRAMS ================= -->
+
+<section class="programs" id="programs">
+
+  <div class="container">
+
+    <div class="section-title">
+      <small>আমাদের উদ্যোগ</small>
+      <h2>আমাদের কার্যক্রম</h2>
+      <p>
+        মানুষের কল্যাণে বিভিন্ন সামাজিক ও মানবিক
+        কার্যক্রম পরিচালনা করা আমাদের লক্ষ্য।
+      </p>
+    </div>
+
+    <div class="program-grid">
+
+      <div class="program">
+        <div class="program-icon">🤲</div>
+        <h3>দুস্থদের সহায়তা</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">🎓</div>
+        <h3>শিক্ষা সহায়তা</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">🏥</div>
+        <h3>চিকিৎসা সহায়তা</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">👥</div>
+        <h3>সামাজিক উন্নয়ন</h3>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">🌱</div>
+        <h3>পরিবেশ সংরক্ষণ</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-cta" id="contact">
 
   <div class="container">
 
     <div class="contact-box">
 
-      <h2>যোগাযোগ</h2>
+      <div>
+        <h2>আমাদের সাথে যোগাযোগ করুন</h2>
 
-      <p>আমাদের একতা ফাউন্ডেশন</p>
+        <p>
+          কোনো প্রয়োজন বা সহযোগিতার জন্য
+          নিচের নম্বরে যোগাযোগ করুন।
+        </p>
 
-      <p>
-        মানবতার সেবায় একসাথে
-      </p>
+        <p>
+          📞 01822025360
+        </p>
+      </div>
 
-      <p>
-        📞 যোগাযোগের জন্য ফাউন্ডেশনের নির্ধারিত নম্বরে যোগাযোগ করুন।
-      </p>
+      <div class="contact-buttons">
 
-      <br>
+        <a
+          href="https://wa.me/8801822025360"
+          target="_blank"
+          class="contact-btn wa">
+          💬 WhatsApp করুন
+        </a>
 
-      <a href="#home" class="btn">
-        হোমে ফিরে যান
-      </a>
+        <a
+          href="tel:01822025360"
+          class="contact-btn call">
+          📞 01822025360
+        </a>
+
+      </div>
 
     </div>
 
@@ -640,9 +959,81 @@ footer strong{
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
-  © ২০২৬ <strong>আমাদের একতা ফাউন্ডেশন</strong> — মানবতার সেবায় একসাথে
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+
+          <img src="logo.jpg" alt="লোগো">
+
+          <div>
+            <h2>আমাদের একতা</h2>
+            <p>ফাউন্ডেশন</p>
+          </div>
+
+        </div>
+
+        <p style="margin-top:15px;">
+          মানবতার পাশে, সবসময়।
+          একতার শক্তিতে গড়ি সুন্দর সমাজ।
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>দ্রুত লিংক</h3>
+
+        <a class="footer-link" href="#home">হোম</a>
+        <a class="footer-link" href="#about">আমাদের সম্পর্কে</a>
+        <a class="footer-link" href="#leaders">নেতৃত্ব</a>
+        <a class="footer-link" href="#programs">কার্যক্রম</a>
+        <a class="footer-link" href="#contact">যোগাযোগ</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>যোগাযোগ</h3>
+
+        <p>📞 01822025360</p>
+
+        <p>
+          💬 WhatsApp:
+          <a href="https://wa.me/8801822025360"
+             target="_blank">
+             01822025360
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      © ২০২৬ আমাদের একতা ফাউন্ডেশন | সর্বস্বত্ব সংরক্ষিত
+    </div>
+
+  </div>
+
 </footer>
 
+
+<!-- TOP BUTTON -->
+
+<a href="#home" class="top-btn" aria-label="উপরে যান">
+  ↑
+</a>
+
 </body>
-</html>
+  </html>
