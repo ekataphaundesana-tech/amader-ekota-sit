@@ -1,0 +1,17 @@
+{
+  "name": "আমাদের একতা ফাউন্ডেশন",
+  "short_name": "আমাদের একতা",
+  "description": "মানবতার পাশে, সবসময়",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#003d2d",
+  "theme_color": "#003d2d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
